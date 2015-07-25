@@ -39,8 +39,14 @@ HTML5是新一代的HTML(Hyper Text Markup Language)，即超文本标记语言�
 ##基础的HTML5页面
 简单的HTML5页面
 ```HTML
-<!doctype html><html lang="zh"><head><meta charset="UTF-8"><title>基础的HTML5页面</title> 
-</head><body>Hello Airing! 
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>基础的HTML5页面</title> 
+</head>
+<body>
+Hello Airing! 
 </body> 
 </html>
 ```
