@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>基础的Canvas</title>
+</head>
+
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas" style="border: 1px solid #aaaaaa; display: block; margin: 50px auto;" width="800" height="600">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+window.onload = function(){
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+}
+</script>
+</body>
+
+</html>
