@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>线条的连接</title>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas" style="border: 1px solid #aaaaaa; display: block; margin: 50px auto;">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(100,100);
+        context.lineTo(300,300);
+        context.lineTo(100,500);
+        context.lineJoin = "miter";
+        context.lineWidth = 20;
+        context.strokeStyle = "red";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(300,100);
+        context.lineTo(500,300);
+        context.lineTo(300,500);
+        context.lineJoin = "bevel";
+        context.lineWidth = 20;
+        context.strokeStyle = "blue";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(500,100);
+        context.lineTo(700,300);
+        context.lineTo(500,500);
+        context.lineJoin = "round";
+        context.lineWidth = 20;
+        context.strokeStyle = "black";
+        context.stroke();
+    }
+</script>
+</body>
+</html>

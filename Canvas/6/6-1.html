@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>线条的帽子</title>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas" style="border: 1px solid #aaaaaa; display: block; margin: 50px auto;">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+
+        context.lineWidth = 50;
+        context.strokeStyle = "#1BAAAA";
+
+        context.beginPath();
+        context.moveTo(100,100);
+        context.lineTo(700,100);
+        context.lineCap = "butt";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(100,300);
+        context.lineTo(700,300);
+        context.lineCap = "round";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(100,500);
+        context.lineTo(700,500);
+        context.lineCap = "square";
+        context.stroke();
+
+        //下面画两个基准线方便观察
+        context.lineWidth = 3;
+        context.strokeStyle = "black";
+
+        context.beginPath();
+        context.moveTo(100,0);
+        context.lineTo(100,600);
+        context.moveTo(700,0);
+        context.lineTo(700,600);
+        context.stroke();
+    }
+</script>
+</body>
+</html>
