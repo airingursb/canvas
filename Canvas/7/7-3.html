@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>填充径向渐变</title>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas" style="border: 1px solid #aaaaaa; display: block; margin: 50px auto;">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+
+        //添加渐变线
+        var grd = context.createRadialGradient(400,300,100,400,300,200);
+
+        //添加颜色断点
+        grd.addColorStop(0,"olive");
+        grd.addColorStop(0.25,"maroon");
+        grd.addColorStop(0.5,"aqua");
+        grd.addColorStop(0.75,"fuchsia");
+        grd.addColorStop(0.25,"teal");
+
+        //应用渐变
+        context.fillStyle = grd;
+
+        context.fillRect(100,100,600,400);
+
+
+    }
+</script>
+</body>
+</html>
