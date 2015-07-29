@@ -1,5 +1,5 @@
 # CANVAS
-如果您喜欢本书，请使用支付宝扫码下面二维码捐助作者。
+如果您喜欢本书，请使用支付宝扫描下面的二维码捐助作者。
 
 ![二维码](http://7xkcl8.com1.z0.glb.clouddn.com/ursbzhifubao.png)
 
