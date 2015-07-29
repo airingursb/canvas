@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>圆角矩形</title>
+    <style>
+        body { background: url("./images/bg3.jpg") repeat; }
+        #canvas { border: 1px solid #aaaaaa; display: block; margin: 50px auto; }
+    </style>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#FFF";
+        context.fillRect(0,0,800,600);
+
+        drawRoundRect(context, 200, 100, 400, 400, 50);
+        context.strokeStyle = "#0078AA";
+        context.stroke();
+    }
+
+    function drawRoundRect(cxt, x, y, width, height, radius){
+        cxt.beginPath();
+        cxt.arc(x + radius, y + radius, radius, Math.PI, Math.PI * 3 / 2);
+        cxt.lineTo(width - radius + x, y);
+        cxt.arc(width - radius + x, radius + y, radius, Math.PI * 3 / 2, Math.PI * 2);
+        cxt.lineTo(width + x, height + y - radius);
+        cxt.arc(width - radius + x, height - radius + y, radius, 0, Math.PI * 1 / 2);
+        cxt.lineTo(radius + x, height +y);
+        cxt.arc(radius + x, height - radius + y, radius, Math.PI * 1 / 2, Math.PI);
+        cxt.closePath();
+    }
+</script>
+</body>
+</html>
