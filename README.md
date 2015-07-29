@@ -11,6 +11,6 @@
 
 本人博客：[http://airingursb.github.io](http://airingursb.github.io)
 
-本书地址：[http://airingursb.gitbooks.io](http://airingursb.gitbooks.io)
+本书地址：[http://airingursb.gitbooks.io/canvas](http://airingursb.gitbooks.io/canvas)
 
 本书github：[http://github.com/airingursb/canvas](http://github.com/airingursb/canvas)
