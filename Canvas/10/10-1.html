@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制弧线</title>
+    <style>
+        body { background: url("./images/bg3.jpg") repeat; }
+        #canvas { border: 1px solid #aaaaaa; display: block; margin: 50px auto; }
+    </style>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#FFF";
+        context.fillRect(0,0,800,600);
+
+        drawArcTo(context, 200, 200, 600, 200, 600, 400, 100);
+    };
+
+    function drawArcTo(cxt, x0, y0, x1, y1, x2, y2, r){
+        cxt.beginPath();
+        cxt.moveTo(x0, y0);
+        cxt.arcTo(x1, y1, x2, y2, r);
+
+        cxt.lineWidth = 6;
+        cxt.strokeStyle = "red";
+        cxt.stroke();
+
+        cxt.beginPath();
+        cxt.moveTo(x0, y0);
+        cxt.lineTo(x1, y1);
+        cxt.lineTo(x2, y2);
+
+        cxt.lineWidth = 1;
+        cxt.strokeStyle = "#0088AA";
+        cxt.stroke();
+
+    }
+</script>
+</body>
+</html>
