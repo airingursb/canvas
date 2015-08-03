@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转变换</title>
+    <style>
+        body { background: url("./images/bg3.jpg") repeat; }
+        #canvas { border: 1px solid #aaaaaa; display: block; margin: 50px auto; }
+    </style>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#FFF";
+        context.fillRect(0,0,800,600);
+
+
+        for(var i = 0; i <= 12; i++){
+            context.save();
+            context.translate(70 + i * 50, 50 + i * 40);
+            context.fillStyle = "#00AAAA";
+            context.fillRect(0,0,20,20);
+            context.restore();
+
+            context.save();
+            context.translate(70 + i * 50, 50 + i * 40);
+            context.rotate(i * 30 * Math.PI / 180);
+            context.fillStyle = "red";
+            context.fillRect(0,0,20,20);
+            context.restore();
+        }
+
+    };
+</script>
+</body>
+</html>
