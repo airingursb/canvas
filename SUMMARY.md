@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * 平移变换
 * [HTML简介](1.md)
 * [开始前的准备](2.md)
 * [从线段开始](3.md)
