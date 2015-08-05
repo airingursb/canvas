@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>矩阵变换</title>
+    <style>
+        body { background: url("./images/bg3.jpg") repeat; }
+        #canvas { border: 1px solid #aaaaaa; display: block; margin: 50px auto; }
+    </style>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#FFF";
+        context.fillRect(0,0,800,600);
+
+        context.fillStyle = "yellow";
+        context.strokeStyle = "#00AAAA";
+        context.lineWidth = 5;
+
+        context.save();
+        //平移至(300,200)
+        context.transform(1,0,0,1,300,200);
+        //水平方向放大2倍，垂直方向放大1.5倍
+        context.transform(2,0,0,1.5,0,0);
+        //水平方向向右倾斜宽度10%的距离，垂直方向向上倾斜高度10%的距离
+        context.transform(1,-0.1,0.1,1,0,0);
+        context.fillRect(0,0,200,200);
+        context.strokeRect(0,0,200,200);
+        context.restore();
+    };
+</script>
+</body>
+</html>
