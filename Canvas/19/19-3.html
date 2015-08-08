@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>图像合成</title>
+    <style>
+        #canvas { border: 1px solid #aaaaaa; display: block; margin: 50px auto; }
+    </style>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+
+        context.globalCompositeOperation = "source-out";
+        context.globalAlpha = 0.5;
+
+        for(var i=0; i<=50; i++){
+            var R = Math.floor(Math.random() * 255);
+            var G = Math.floor(Math.random() * 255);
+            var B = Math.floor(Math.random() * 255);
+
+            context.fillStyle = "rgb(" + R + "," + G + "," + B + ")";
+
+            context.beginPath();
+            context.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 100, 0, Math.PI * 2);
+            context.fill();
+        }
+
+    };
+</script>
+</body>
+</html>
