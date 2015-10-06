@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>textAlign</title>
+    <style>
+        body { background: url("./images/bg3.jpg") repeat; }
+        #canvas { border: 1px solid #aaaaaa; display: block; margin: 50px auto; }
+    </style>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#FFF";
+        context.fillRect(0,0,800,600);
+
+        // 在位置 400 创建蓝线
+        context.strokeStyle="blue";
+        context.moveTo(400,100);
+        context.lineTo(400,500);
+        context.stroke();
+
+
+        context.fillStyle = "#000";
+        context.font="50px Arial";
+
+        // 显示不同的 textAlign 值
+        context.textAlign="start";
+        context.fillText("textAlign=start", 400, 120);
+        context.textAlign="end";
+        context.fillText("textAlign=end", 400, 200);
+        context.textAlign="left";
+        context.fillText("textAlign=left", 400, 280);
+        context.textAlign="center";
+        context.fillText("textAlign=center", 400, 360);
+        context.textAlign="right";
+        context.fillText("textAlign=right", 400, 480);
+    };
+</script>
+</body>
+</html>

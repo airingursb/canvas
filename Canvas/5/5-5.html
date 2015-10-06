@@ -12,7 +12,7 @@
 </div>
 
 <script>
-    window.onload = function(){
+    window.onload = function() {
         var canvas = document.getElementById("canvas");
         canvas.width = 800;
         canvas.height = 600;
@@ -39,25 +39,27 @@
         context.stroke();
     }
 
-    function drawBlackRect(cxt, x, y, width, height){
-        cxt.beginPath();
-        cxt.rect(x, y, width, height);
+        function drawBlackRect(cxt, x, y, width, height) {
+            cxt.beginPath();
+            cxt.rect(x, y, width, height);
 
-        cxt.lineWidth = 5;
-        cxt.strokeStyle = "black";
+            cxt.lineWidth = 5;
+            cxt.strokeStyle = "black";
 
-        cxt.stroke();
-    }
+            cxt.stroke();
+        }
 
-    function drawWhiteRect(cxt, x, y, width, height){
-        cxt.beginPath();
-        cxt.rect(x, y, width, height);
+        function drawWhiteRect(cxt, x, y, width, height) {
+            cxt.beginPath();
+            cxt.rect(x, y, width, height);
 
-        cxt.lineWidth = 5;
-        cxt.strokeStyle = "white";
+            cxt.lineWidth = 5;
+            cxt.strokeStyle = "white";
 
-        cxt.stroke();
-    }
+            cxt.stroke();
+        }
+
+
 </script>
 </body>
 </html>

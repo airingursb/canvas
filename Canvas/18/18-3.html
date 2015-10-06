@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>measureText</title>
+    <style>
+        body { background: url("./images/bg3.jpg") repeat; }
+        #canvas { border: 1px solid #aaaaaa; display: block; margin: 50px auto; }
+    </style>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#FFF";
+        context.fillRect(0,0,800,600);
+
+        //居中显示
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+
+        context.fillStyle = "#00AAAA";
+        context.font="30px Arial";
+        var txt="Hello Canvas";
+        context.fillText("width:" + context.measureText(txt).width,400,300);
+        context.fillText(txt,400,250);
+
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>文本渲染</title>
+    <style>
+        body { background: url("./images/bg3.jpg") repeat; }
+        #canvas { border: 1px solid #aaaaaa; display: block; margin: 50px auto; }
+    </style>
+</head>
+<body>
+<div id="canvas-warp">
+    <canvas id="canvas">
+        你的浏览器居然不支持Canvas？！赶快换一个吧！！
+    </canvas>
+</div>
+
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#FFF";
+        context.fillRect(0,0,800,600);
+
+        context.beginPath();
+        context.font = "50px Verdana";
+        var gradient = context.createLinearGradient(0,0,800,0);
+        gradient.addColorStop("0","magenta");
+        gradient.addColorStop("0.5","blue");
+        gradient.addColorStop("1.0","red");
+        context.fillStyle = gradient;
+        context.strokeStyle = "#00AAAA";
+        context.strokeText("airingursb.github.io", 50, 100);
+        context.fillText("airingursb.github.io", 50, 200);
+
+        //限制宽度
+        context.fillText("airingursb.github.io", 50, 300, 200);
+
+        context.beginPath();
+        var img = new Image();
+        img.src = "./images/bg1.jpg";
+        img.onload = function(){
+            var pattern = context.createPattern(img, "repeat");
+            context.fillStyle = pattern;
+            context.fillText("airingursb.github.io", 50, 400);
+        }
+
+        context.beginPath();
+        context.fillStyle = "#00AAAA";
+        context.fillText("Airing的博客，欢迎访问", 50, 500);
+    };
+</script>
+</body>
+</html>
