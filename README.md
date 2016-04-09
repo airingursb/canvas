@@ -9,7 +9,7 @@
 
 本人邮箱：airing@ursb.me
 
-本人博客：[http://airingursb.github.io](http://airingursb.github.io)
+本人博客：[http://ursb.me](http://ursb.me)
 
 本书地址：[http://airingursb.gitbooks.io/canvas](http://airingursb.gitbooks.io/canvas)
 
