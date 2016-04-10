@@ -1,4 +1,5 @@
 # CANVAS
+
 如果您喜欢本书，请使用支付宝扫描下面的二维码捐助作者。
 
 ![二维码](http://7xkcl8.com1.z0.glb.clouddn.com/ursbzhifubao.png)
@@ -14,3 +15,6 @@
 本书地址：[http://airingursb.gitbooks.io/canvas](http://airingursb.gitbooks.io/canvas)
 
 本书github：[http://github.com/airingursb/canvas](http://github.com/airingursb/canvas)
+
+
+![Canvas--Draw on the Web](http://7xkcl8.com1.z0.glb.clouddn.com/cover.jpg)
