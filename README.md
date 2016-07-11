@@ -14,7 +14,7 @@
 
 本人博客：[http://ursb.me](http://ursb.me)
 
-本书主页：[http://Airing.coding.me/canvas](http://Airing.coding.me/canvas)
+本书主页：[http://airing.coding.me/canvas](http://airing.coding.me/canvas)
 
 本书GitHub：[http://github.com/airingursb/canvas](http://github.com/airingursb/canvas)
 
