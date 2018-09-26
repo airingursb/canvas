@@ -2,7 +2,7 @@
 
 如果您喜欢本书，请使用支付宝扫描下面的二维码捐助作者。
 
-![二维码](http://7xkcl8.com1.z0.glb.clouddn.com/ursbzhifubao.png)
+![二维码](http://airing.ursb.me/ursbzhifubao.png)
 
 谢谢您的支持！也欢迎您订阅本书。
 
@@ -19,4 +19,4 @@
 本书GitHub：[http://github.com/airingursb/canvas](http://github.com/airingursb/canvas)
 
 
-![Canvas--Draw on the Web](http://7xkcl8.com1.z0.glb.clouddn.com/cover.jpg)
+![Canvas--Draw on the Web](http://airing.ursb.me/cover.jpg)
